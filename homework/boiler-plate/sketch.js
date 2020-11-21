@@ -35,20 +35,19 @@ function setup() {
 
     for (var j = 50; j <=width-10; j=j+50) 
     {
-    
+      w++
        plinkos[w] = new Plinko(j,175);
     }
 
      for (var j = 75; j <=width; j=j+50) 
     {
-    
-       plinkos[b] = new Plinko(j,275);
+    w++
+       plinkos[w] = new Plinko(j,275);
     }
 
      for (var j = 50; j <=width-10; j=j+50) 
-    {
-    
-       plinkos[c] = new Plinko(j,375);
+    {w++
+       plinkos[w] = new Plinko(j,375);
     }
 
     
@@ -65,7 +64,7 @@ function draw() {
   Engine.update(engine);
  
   
-   for (var i = 0; i < plinkos.length; i++) {
+   for (var i = 1; i < plinkos.length; i++) {
      
      plinkos[i].display();
      
@@ -76,11 +75,11 @@ function draw() {
      score++;
    }
  
-  for (var j = 0; j < particles.length; j++) {
+  for (var j = 1; j < particles.length; j++) {
      q++;
      particles[q].display();
    }
-   for (var k = 0; k < divisions.length; k++) {
+   for (var k = 1; k < divisions.length; k++) {
      i++;
      divisions[i].display();
    }
